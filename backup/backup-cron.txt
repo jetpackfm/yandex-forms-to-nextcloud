@@ -1,0 +1,5 @@
+# Бэкап n8n каждый день в 02:00
+0 2 * * * /bin/bash /home/nextadmin/backups/backup-n8n.sh >> /var/log/backup-n8n.log 2>&1
+
+# Бэкап Nextcloud каждый день в 03:00
+0 3 * * * /bin/bash /home/nextadmin/backups/backup-nextcloud.sh >> /var/log/backup-nextcloud.log 2>&1

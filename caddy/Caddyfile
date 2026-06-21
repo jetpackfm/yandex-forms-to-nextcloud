@@ -1,0 +1,14 @@
+{
+    email jetpack7@yandex.ru
+}
+
+n8n.jetpack-jobit.ru:8443 {
+    handle /webhook/* {
+        reverse_proxy 10.30.0.2:5678
+    }
+    respond "Forbidden" 403
+}
+
+n8n.jetpack-jobit.ru:8444 {
+    reverse_proxy 10.30.0.2:5678
+}
